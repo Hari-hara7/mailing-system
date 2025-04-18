@@ -4,7 +4,7 @@ A full-stack web application built to manage emergency contacts and send emails 
 
 ## 📋 **Features**
 
-- **Add, View, Edit, and Delete Contacts** 📞
+- **Add, View Contacts** 📞
 - **Send Emergency Emails** 📧
 - **Responsive Design** 🖥️📱
 - **Simple and Clean UI** 🎨
@@ -48,8 +48,8 @@ A full-stack web application built to manage emergency contacts and send emails 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/emergency-contact-app.git
-cd emergency-contact-app
+git clone https://github.com/Hari-hara7/mailing-system.git
+cd frontend
 ```
 
 ## 2. Setup the Backend (Server)
