@@ -12,10 +12,16 @@ type Contact = {
 
 export default function Home() {
   const [contacts, setContacts] = useState<Contact[]>([]);
+  const [accessGranted, setAccessGranted] = useState(false);
+  const [secretInput, setSecretInput] = useState('');
+
+  const SECRET_KEY = '2277'; // Replace with process.env.REACT_APP_SECRET_KEY for production
 
   useEffect(() => {
-    fetchContacts();
-  }, []);
+    if (accessGranted) {
+      fetchContacts();
+    }
+  }, [accessGranted]);
 
   const fetchContacts = async () => {
     const data = await getContacts();
@@ -31,6 +37,44 @@ export default function Home() {
     await sendMail(id);
     alert('Email sent!');
   };
+
+  const handleSecretSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (secretInput === SECRET_KEY) {
+      setAccessGranted(true);
+    } else {
+      alert('Invalid secret key');
+    }
+  };
+
+  if (!accessGranted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white px-4">
+        <form
+          onSubmit={handleSecretSubmit}
+          className="bg-black p-8 rounded-lg shadow-lg max-w-sm w-full space-y-4"
+        >
+          <h2 className="text-white text-2xl font-bold text-center">
+            Enter Secret Key
+          </h2>
+          <input
+            type="password"
+            placeholder="Secret Key"
+            value={secretInput}
+            onChange={(e) => setSecretInput(e.target.value)}
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-white"
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-white text-black font-semibold py-2 rounded hover:bg-gray-200"
+          >
+            Enter
+          </button>
+        </form>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white min-h-screen py-8 px-4 md:px-12">
