@@ -50,3 +50,20 @@ A full-stack web application built to manage emergency contacts and send emails 
 ```bash
 git clone https://github.com/yourusername/emergency-contact-app.git
 cd emergency-contact-app
+```
+
+## 2. Setup the Backend (Server)
+
+### 📁 Navigate to the `backend` folder:
+```bash
+cd backend
+```
+⚙️ Create a .env file
+In the root directory of the server folder, create a .env file and add the following environment variables:
+
+env
+Copy
+Edit
+MONGO_URI=your_mongodb_connection_string
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_email_password
