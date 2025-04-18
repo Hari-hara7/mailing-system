@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:7000/api/contacts';
+const API_BASE = 'https://mailing-system-1.onrender.com/api/contacts';
 
 export const getContacts = async () => {
   const res = await fetch(API_BASE);
