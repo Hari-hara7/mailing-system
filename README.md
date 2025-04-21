@@ -1,6 +1,12 @@
 # 🚑 **Emergency Contact Directory**
 
 A full-stack web application built to manage emergency contacts and send emails using the **MERN** stack (MongoDB, Express, React, Node.js). This app allows users to store and manage emergency contact details, as well as send an email to any contact directly from the app.
+<p align="center">
+  <img src="https://img.shields.io/badge/Tech-MERN-blue?style=flat-square&logo=appveyor" />
+  <img src="https://img.shields.io/badge/Frontend-TypeScript-blueviolet?style=flat-square&logo=typescript" />
+  <img src="https://img.shields.io/badge/Backend-JavaScript-green?style=flat-square&logo=node.js" />
+  <img src="https://img.shields.io/badge/Styling-TailwindCSS-38bdf8?style=flat-square&logo=tailwind-css" />
+</p>
 
 ## 📋 **Features**
 
